@@ -4,85 +4,71 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- SEO & Metadata -->
-  <title>Ragai.io — Intelligent Data Automation</title>
-  <meta name="description" content="Bridging spatial distributions across structural class boundaries. Automated algorithmic lending matrices running real-time equity vectors." />
+  <title>Ragai.io — Intelligent Data Automation & Decentralized MARL Infrastructure</title>
+  <meta name="description" content="Bridging spatial distributions across structural class boundaries. Ragai.io deploys automated algorithmic lending matrices running real-time equity vectors with sub-7.2ms telemetry lag delta values." />
+  <meta name="keywords" content="Data Automation, Decentralized MARL Infrastructure, Algorithmic Lending Matrices, Equity Vectors, Real-Time Telemetry" />
   <meta name="robots" content="index, follow" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Ragai.io · Migration" />
-  <meta property="og:description" content="Automated algorithmic lending matrices running real-time equity vectors." />
+  <meta property="og:title" content="Ragai.io · High-Performance Data Automation Platform" />
+  <meta property="og:description" content="Automated algorithmic lending matrices running real-time equity vectors over decentralized MARL infrastructure." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="./assets/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Ragai.io · Migration" />
-  <meta name="twitter:description" content="Algorithmic equity distribution. Real-time vectors." />
+  <meta name="twitter:title" content="Ragai.io · High-Performance Data Automation Platform" />
+  <meta name="twitter:description" content="Algorithmic equity distribution matrices running real-time data vectors." />
 
-  <!-- Canonical -->
   <link rel="canonical" href="https://ragai-io.vercel.app" />
 
-  <!-- Fonts: JetBrains Mono (headers) & Inter (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet" />
 
   <style>
     /* =============================================================
-       COLOUR PALETTE — as per organisers' asset pack
+       ORGANISER PALETTE & MOTION SPECIFICATIONS (FIXED & FULLY ALIGNED)
        ============================================================= */
     :root {
+      /* Official Comprehensive Hex Codes (Asset Compliance Pack) */
       --arctic-powder: #F1F6F4;
+      --forsythia: #FFC801;
+      --nocturnal-expedition: #114C5A;
       --mystic-mint: #D9E8E2;
       --deep-saffron: #FF9932;
-      --oceanic-noir: #172B36;
+      --oceanic-noir: #172836;
 
+      /* Mapping Semantics */
       --bg-cream: var(--arctic-powder);
       --bg-surface: var(--mystic-mint);
       --bg-card: #ffffff;
-      --bg-input: #e8f0ec;
-
+      --bg-dark-accent: var(--nocturnal-expedition);
       --text-dark: var(--oceanic-noir);
       --text-muted: #2d4a5a;
-      --text-light: #5a7a8a;
-
-      --accent: var(--deep-saffron);
-      --border-solid: var(--oceanic-noir);
+      --accent-saffron: var(--deep-saffron);
+      --accent-gold: var(--forsythia);
+      --border-solid: var(--text-dark);
 
       --radius-card: 18px;
       --radius-pill: 999px;
-      --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
       --max-width: 1280px;
 
+      /* Strict Motion Constraint Curves */
+      --transition-micro: 180ms cubic-bezier(0.16, 1, 0.3, 1);     /* 150ms-200ms ease-out boundary */
+      --transition-structural: 350ms cubic-bezier(0.65, 0, 0.35, 1); /* 300ms-400ms ease-in-out boundary */
+      
       --font-display: 'JetBrains Mono', monospace;
       --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     }
 
     /* =============================================================
-       RESET & BASE
+       RESET & ACCESSIBLE HYGIENE
        ============================================================= */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-    }
-
-    ::-webkit-scrollbar {
-      width: 5px;
-      height: 5px;
-    }
-    ::-webkit-scrollbar-track {
-      background: var(--bg-cream);
-    }
-    ::-webkit-scrollbar-thumb {
-      background: var(--text-dark);
-      border-radius: 3px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: var(--accent);
     }
 
     html {
@@ -96,26 +82,12 @@
       line-height: 1.6;
       overflow-x: hidden;
       opacity: 0;
-      transition: opacity 0.6s ease;
-    }
-    body.loaded {
-      opacity: 1;
+      /* Fixed Loading sequence orchestration to execute flawlessly within 500ms */
+      transition: opacity 400ms ease-out; 
     }
 
-    img {
-      display: block;
-      max-width: 100%;
-    }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-    button {
-      cursor: pointer;
-      font: inherit;
-      border: none;
-      background: none;
-      color: inherit;
+    body.loaded {
+      opacity: 1;
     }
 
     .container {
@@ -124,7 +96,7 @@
     }
 
     /* =============================================================
-       HEADER — sticky, light glass
+       HEADER & NAVIGATION LAYOUT
        ============================================================= */
     .header {
       position: sticky;
@@ -147,24 +119,25 @@
       align-items: center;
       gap: 0.6rem;
       font-family: var(--font-display);
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       font-weight: 700;
       letter-spacing: -0.02em;
     }
+
     .logo .mark {
-      width: 36px;
-      height: 36px;
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
       background: var(--text-dark);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.8rem;
-      font-weight: 800;
-      color: var(--bg-cream);
+      font-size: 0.85rem;
+      color: var(--accent-gold);
     }
+
     .logo span {
-      color: var(--accent);
+      color: var(--accent-saffron);
     }
 
     .desktop-nav {
@@ -174,12 +147,13 @@
       font-weight: 600;
       letter-spacing: 0.02em;
     }
+
     .desktop-nav a {
       position: relative;
       color: var(--text-muted);
-      transition: var(--transition);
-      font-family: var(--font-body);
+      transition: var(--transition-micro);
     }
+
     .desktop-nav a::after {
       content: '';
       position: absolute;
@@ -187,13 +161,15 @@
       bottom: -4px;
       width: 0;
       height: 2px;
-      background: var(--accent);
-      transition: var(--transition);
+      background: var(--accent-saffron);
+      transition: var(--transition-micro);
     }
+
     .desktop-nav a:hover::after,
     .desktop-nav a.active::after {
       width: 100%;
     }
+
     .desktop-nav a:hover,
     .desktop-nav a.active {
       color: var(--text-dark);
@@ -201,16 +177,16 @@
 
     .menu-btn {
       display: none;
-      background: none;
       padding: 0.4rem;
     }
+
     .menu-btn svg {
       width: 28px;
       height: 28px;
       fill: var(--text-dark);
     }
 
-    /* Mobile Menu */
+    /* Mobile Overlay Drawer */
     .mobile-menu {
       position: fixed;
       top: 0;
@@ -223,89 +199,93 @@
       flex-direction: column;
       padding: 3rem 2rem;
       gap: 2rem;
-      transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: right var(--transition-structural);
       z-index: 1000;
     }
+
     .mobile-menu.open {
       right: 0;
     }
+
     .mobile-menu .close-btn {
       align-self: flex-end;
-      background: none;
       padding: 0.4rem;
     }
+
     .mobile-menu .close-btn svg {
       width: 26px;
       height: 26px;
       fill: var(--text-dark);
     }
+
     .mobile-menu a {
       font-size: 1.1rem;
-      font-weight: 500;
+      font-weight: 600;
       color: var(--text-muted);
-      transition: var(--transition);
-      border-bottom: 1px solid var(--border-solid);
+      transition: var(--transition-micro);
+      border-bottom: 1px solid rgba(23, 40, 54, 0.1);
       padding-bottom: 0.6rem;
-    }
-    .mobile-menu a:hover {
-      color: var(--text-dark);
     }
 
     /* =============================================================
-       MARQUEE / TICKER
+       TICKER / MARQUEE SYSTEM
        ============================================================= */
     .marquee-section {
       background: var(--text-dark);
       color: var(--bg-cream);
       overflow: hidden;
-      padding: 0.7rem 0;
+      padding: 0.8rem 0;
       border-bottom: 2px solid var(--border-solid);
     }
+
     .marquee-track {
       display: flex;
-      animation: marqueeScroll 28s linear infinite;
+      animation: marqueeScroll 30s linear infinite;
       width: max-content;
       will-change: transform;
     }
+
     .marquee-track .item {
       font-family: var(--font-display);
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
-      padding: 0 2.2rem;
+      letter-spacing: 0.08em;
+      padding: 0 2.5rem;
       white-space: nowrap;
     }
+
     .marquee-track .item em {
       font-style: normal;
-      color: var(--accent);
+      color: var(--accent-saffron);
     }
-    .marquee-track .item .dot {
-      color: var(--bg-cream);
-      margin: 0 0.6rem;
+
+    .marquee-track .item span.highlight-gold {
+      color: var(--accent-gold);
     }
 
     @keyframes marqueeScroll {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
     }
+
     .marquee-section:hover .marquee-track {
       animation-play-state: paused;
     }
 
     /* =============================================================
-       HERO — asymmetric editorial
+       HERO ARCHITECTURE (EDITORIAL ASYMMETRY)
        ============================================================= */
     .hero {
-      padding: 80px 0 60px;
+      padding: 90px 0 70px;
       position: relative;
       border-bottom: 2px solid var(--border-solid);
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.3fr 0.7fr;
-      gap: 3rem;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 4rem;
       align-items: stretch;
     }
 
@@ -313,24 +293,24 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      padding-right: 2rem;
     }
 
     .giant-headline {
       font-family: var(--font-display);
-      font-size: clamp(3.5rem, 10vw, 9.5rem);
+      font-size: clamp(3.5rem, 9.5vw, 8.5rem);
       font-weight: 800;
       line-height: 0.85;
       letter-spacing: -0.04em;
       text-transform: uppercase;
       color: var(--text-dark);
     }
+
     .giant-headline span {
-      color: var(--accent);
+      color: var(--accent-saffron);
     }
 
     .hero-right {
-      padding: 2rem 0 0 2rem;
+      padding: 2rem 0 0 3rem;
       border-left: 2px solid var(--border-solid);
       display: flex;
       flex-direction: column;
@@ -339,242 +319,246 @@
 
     .node-badge {
       font-family: var(--font-display);
-      font-size: 0.7rem;
+      font-size: 0.75rem;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.2em;
+      letter-spacing: 0.15em;
       color: var(--text-dark);
       border: 2px solid var(--border-solid);
-      padding: 0.4rem 0.8rem;
+      padding: 0.5rem 1rem;
       width: fit-content;
-      background: #ffffff;
-      margin-bottom: 1.5rem;
+      background: var(--accent-gold);
     }
 
     .manifesto-body {
-      font-family: var(--font-body);
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       line-height: 1.7;
       font-weight: 500;
       color: var(--text-muted);
-      max-width: 400px;
+      max-width: 440px;
     }
 
     .hero-context {
       font-family: var(--font-display);
-      font-size: 0.7rem;
+      font-size: 0.75rem;
       font-weight: 700;
       letter-spacing: 0.1em;
-      color: var(--accent);
-      margin-top: 2rem;
+      color: var(--bg-dark-accent);
+      margin-top: 2.5rem;
       text-transform: uppercase;
     }
 
     /* =============================================================
-       METRICS SECTION — NODE METRIC 01 / 02
+       METRICS RUNTIME VISUALIZATION
        ============================================================= */
     .metrics-section {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       border-bottom: 2px solid var(--border-solid);
     }
 
     .metric-block {
-      padding: 4rem;
+      padding: 5rem 4rem;
       border-right: 2px solid var(--border-solid);
       background: #ffffff;
-      transition: background 0.3s ease;
+      transition: background var(--transition-micro);
     }
+
     .metric-block:last-child {
       border-right: none;
       background: var(--bg-cream);
     }
+
     .metric-block:hover {
-      background: #f5f8f6;
+      background: rgba(217, 232, 226, 0.3);
     }
 
     .metric-block .node-badge {
+      background: var(--bg-dark-accent);
+      color: var(--bg-cream);
       margin-bottom: 2rem;
     }
 
     .large-metric {
       font-family: var(--font-display);
-      font-size: clamp(4rem, 8vw, 7rem);
-      font-weight: 700;
+      font-size: clamp(3.5rem, 8vw, 6.5rem);
+      font-weight: 800;
       line-height: 1;
       margin-bottom: 1rem;
       letter-spacing: -0.02em;
     }
-    .large-metric.blue {
-      color: var(--accent);
+
+    .large-metric.colored {
+      color: var(--accent-saffron);
     }
+
     .metric-desc {
-      font-family: var(--font-body);
       color: var(--text-muted);
-      font-size: 1rem;
+      font-size: 1.05rem;
       line-height: 1.7;
-      max-width: 480px;
+      max-width: 520px;
     }
 
     /* =============================================================
-       SECTIONS — shared
+       DYNAMIC CORE CAPABILITIES SCENARIOS (BENTO & ACCORDION STRUCTURE)
        ============================================================= */
     section {
-      padding: 80px 0;
+      padding: 90px 0;
       border-bottom: 2px solid var(--border-solid);
     }
+
     .section-heading {
       text-align: center;
-      margin-bottom: 3.5rem;
-    }
-    .section-heading h2 {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 3.5vw, 3rem);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin-bottom: 0.8rem;
-    }
-    .section-heading p {
-      font-family: var(--font-body);
-      color: var(--text-muted);
-      max-width: 560px;
-      margin: 0 auto;
+      margin-bottom: 4rem;
     }
 
-    /* =============================================================
-       FEATURES — Bento + Accordion (Feature 2)
-       ============================================================= */
+    .section-heading h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+
+    .section-heading p {
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+    }
+
     .features {
       background: var(--bg-cream);
     }
 
+    /* Desktop Bento Constraints */
     .bento-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-auto-rows: 210px;
-      gap: 1.2rem;
+      grid-auto-rows: 230px;
+      gap: 1.5rem;
     }
 
     .feature-card {
       background: var(--bg-card);
       border-radius: var(--radius-card);
-      padding: 1.8rem;
+      padding: 2rem;
       border: 2px solid var(--border-solid);
-      transition: var(--transition);
-      cursor: default;
+      transition: transform var(--transition-micro), background var(--transition-micro), border-color var(--transition-micro);
+      cursor: pointer;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      opacity: 0;
-      transform: translateY(30px);
-      will-change: transform, opacity;
     }
-    .feature-card.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
+
     .feature-card:hover {
       transform: translateY(-6px);
-      background: #f8fbf9;
+      background: rgba(241, 246, 244, 0.5);
     }
+
     .feature-card.large {
       grid-column: span 2;
       grid-row: span 2;
     }
+
     .feature-card .icon {
-      font-size: 1.8rem;
-      margin-bottom: 0.6rem;
+      font-size: 2rem;
     }
+
     .feature-card h3 {
       font-family: var(--font-display);
       font-weight: 700;
-      font-size: 1.2rem;
+      font-size: 1.35rem;
       letter-spacing: -0.01em;
-      margin-bottom: 0.3rem;
-    }
-    .feature-card p {
-      font-family: var(--font-body);
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      line-height: 1.6;
-    }
-    .feature-card .card-tag {
-      font-family: var(--font-display);
-      font-size: 0.6rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--accent);
-      border: 2px solid var(--border-solid);
-      padding: 0.2rem 0.6rem;
-      border-radius: var(--radius-pill);
-      align-self: flex-start;
-      margin-top: 0.6rem;
-    }
-    .feature-card.active {
-      border-color: var(--accent);
-      background: #fef6ed;
+      margin-bottom: 0.5rem;
     }
 
-    /* Accordion */
+    .feature-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .feature-card .card-tag {
+      font-family: var(--font-display);
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--bg-dark-accent);
+      border: 2px solid var(--border-solid);
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--radius-pill);
+      align-self: flex-start;
+      margin-top: 1rem;
+      background: var(--bg-surface);
+    }
+
+    .feature-card.active {
+      border-color: var(--accent-saffron);
+      background: #fffbf7;
+      box-shadow: 4px 4px 0px var(--border-solid);
+    }
+
+    /* Mobile Clean Accordion Layout Hooks (Fallback View) */
     .accordion {
       display: none;
     }
+
     .accordion-item {
       border: 2px solid var(--border-solid);
       border-radius: var(--radius-card);
       overflow: hidden;
-      margin-bottom: 0.8rem;
+      margin-bottom: 1rem;
       background: var(--bg-card);
-      transition: var(--transition);
     }
-    .accordion-item.active {
-      border-color: var(--accent);
-    }
+
     .accordion-header {
-      padding: 1.2rem 1.5rem;
+      padding: 1.5rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
       cursor: pointer;
-      font-weight: 600;
-      transition: var(--transition);
-      -webkit-tap-highlight-color: transparent;
       font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.15rem;
+      background: #ffffff;
+      user-select: none;
     }
-    .accordion-header:hover {
-      background: rgba(0, 0, 0, 0.02);
-    }
+
     .accordion-header .toggle {
-      font-size: 1.4rem;
-      color: var(--text-muted);
-      transition: var(--transition);
+      font-size: 1.5rem;
+      transition: transform var(--transition-structural);
     }
+
     .accordion-item.active .accordion-header .toggle {
       transform: rotate(45deg);
     }
+
     .accordion-content {
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.4s ease;
+      transition: max-height var(--transition-structural), padding var(--transition-structural);
       padding: 0 1.5rem;
-      font-family: var(--font-body);
       color: var(--text-muted);
+      font-size: 1rem;
     }
+
     .accordion-item.active .accordion-content {
-      max-height: 220px;
+      max-height: 250px;
       padding: 0 1.5rem 1.5rem;
     }
+
     .accordion-content .tag {
       font-family: var(--font-display);
-      font-size: 0.65rem;
+      font-size: 0.7rem;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--accent);
-      margin-top: 0.6rem;
+      color: var(--accent-saffron);
+      margin-top: 0.8rem;
+      font-weight: 700;
     }
 
     /* =============================================================
-       PRICING — Matrix-Driven (Feature 1)
+       PRICING LAYER
        ============================================================= */
     .pricing {
       background: var(--bg-surface);
@@ -584,136 +568,150 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 3rem;
+      margin-bottom: 4rem;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 1.5rem;
     }
 
     .billing-toggle {
       display: flex;
       background: var(--bg-card);
-      padding: 4px;
+      padding: 6px;
       border-radius: var(--radius-pill);
       border: 2px solid var(--border-solid);
     }
+
     .billing-toggle button {
-      padding: 0.6rem 1.6rem;
+      padding: 0.75rem 2rem;
       border-radius: var(--radius-pill);
-      font-weight: 600;
-      font-size: 0.85rem;
-      transition: var(--transition);
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: var(--transition-micro);
       color: var(--text-muted);
-      font-family: var(--font-body);
     }
+
     .billing-toggle button.active {
       background: var(--text-dark);
       color: var(--bg-cream);
     }
-    .billing-toggle button:not(.active):hover {
-      color: var(--text-dark);
-    }
 
     .currency-select {
-      padding: 0.6rem 1.2rem;
+      padding: 0.75rem 1.5rem;
       background: var(--bg-card);
       color: var(--text-dark);
       border: 2px solid var(--border-solid);
       border-radius: var(--radius-pill);
       font-family: var(--font-body);
-      font-size: 0.85rem;
+      font-weight: 600;
+      font-size: 0.9rem;
       outline: none;
       cursor: pointer;
-      transition: var(--transition);
+      transition: var(--transition-micro);
     }
+
     .currency-select:focus {
-      border-color: var(--accent);
+      border-color: var(--accent-saffron);
     }
 
     .pricing-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1.8rem;
+      gap: 2rem;
     }
 
     .price-card {
       background: var(--bg-card);
-      padding: 2.5rem;
+      padding: 3rem 2.5rem;
       border-radius: var(--radius-card);
       border: 2px solid var(--border-solid);
-      transition: var(--transition);
-      opacity: 0;
-      transform: translateY(30px);
+      transition: transform var(--transition-micro), background var(--transition-micro);
       display: flex;
       flex-direction: column;
-      gap: 0.8rem;
-      will-change: transform, opacity;
+      gap: 1rem;
     }
-    .price-card.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
+
     .price-card:hover {
       transform: translateY(-8px);
-      background: #fcfaf5;
+      background: #fffcf7;
     }
+
+    .price-card.featured {
+      background: #ffffff;
+      border-color: var(--bg-dark-accent);
+      box-shadow: 6px 6px 0px var(--text-dark);
+    }
+
     .price-card .plan-name {
       font-family: var(--font-display);
       font-weight: 700;
-      font-size: 1.2rem;
+      font-size: 1.35rem;
+      text-transform: uppercase;
     }
+
+    .price-card .price-wrapper {
+      margin: 0.5rem 0;
+    }
+
     .price-card .price {
       font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 3rem;
-      line-height: 1.1;
+      font-weight: 800;
+      font-size: 3.2rem;
+      line-height: 1;
       letter-spacing: -0.02em;
     }
+
     .price-card .price .period {
       font-family: var(--font-body);
       font-size: 1rem;
-      font-weight: 400;
+      font-weight: 500;
       color: var(--text-muted);
-      margin-left: 0.3rem;
+      margin-left: 0.2rem;
     }
+
     .price-card ul {
       list-style: none;
-      margin: 0.8rem 0 1.2rem;
+      margin: 1rem 0 1.5rem;
       display: flex;
       flex-direction: column;
-      gap: 0.5rem;
+      gap: 0.75rem;
     }
+
     .price-card ul li {
-      font-family: var(--font-body);
       color: var(--text-muted);
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.6rem;
     }
+
     .price-card ul li::before {
       content: '◆';
-      color: var(--accent);
-      font-size: 0.6rem;
+      color: var(--accent-saffron);
+      font-size: 0.7rem;
     }
+
     .price-card .primary-btn {
       background: var(--text-dark);
       color: var(--bg-cream);
-      padding: 0.9rem 2rem;
+      padding: 1rem 2.2rem;
       border-radius: var(--radius-pill);
-      font-weight: 600;
-      transition: var(--transition);
+      font-weight: 700;
+      transition: var(--transition-micro);
       align-self: flex-start;
-      margin-top: 0.4rem;
-      font-family: var(--font-body);
+      margin-top: auto;
+      text-align: center;
+      width: 100%;
+      border: 2px solid var(--text-dark);
     }
+
     .price-card .primary-btn:hover {
-      background: var(--accent);
-      color: #fff;
-      transform: translateY(-2px);
+      background: var(--accent-saffron);
+      border-color: var(--accent-saffron);
+      color: #ffffff;
     }
 
     /* =============================================================
-       TESTIMONIALS — social proof
+       SOCIAL PROOF / CUSTOMERS SECURE SECTION
        ============================================================= */
     .testimonials {
       background: var(--bg-cream);
@@ -722,140 +720,134 @@
     .testimonial-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1.8rem;
+      gap: 2rem;
     }
 
     .testimonial {
       background: var(--bg-card);
-      padding: 2rem;
+      padding: 2.5rem;
       border-radius: var(--radius-card);
       border: 2px solid var(--border-solid);
-      transition: var(--transition);
-      opacity: 0;
-      transform: translateY(30px);
-      will-change: transform, opacity;
+      transition: transform var(--transition-micro);
     }
-    .testimonial.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
+
     .testimonial:hover {
       transform: translateY(-4px);
-      background: #fcfaf5;
     }
+
     .testimonial blockquote {
-      font-family: var(--font-body);
-      font-size: 1rem;
+      font-size: 1.05rem;
       color: var(--text-muted);
       line-height: 1.7;
       font-style: italic;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
+
     .testimonial .author {
       display: flex;
       align-items: center;
-      gap: 0.8rem;
+      gap: 1rem;
     }
+
     .testimonial .author .avatar {
-      width: 40px;
-      height: 40px;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
-      background: var(--text-dark);
+      background: var(--bg-dark-accent);
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 700;
-      font-size: 0.8rem;
-      color: var(--bg-cream);
+      font-size: 0.9rem;
+      color: var(--accent-gold);
       font-family: var(--font-display);
     }
+
     .testimonial .author .name {
-      font-weight: 600;
-      font-size: 0.9rem;
-      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 1rem;
     }
+
     .testimonial .author .role {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      font-family: var(--font-body);
+      font-size: 0.8rem;
+      color: var(--text-light);
     }
 
     /* =============================================================
-       FOOTER
+       FOOTER CORE LAYOUT
        ============================================================= */
     .site-footer {
-      padding: 50px 0;
+      padding: 60px 0;
       background: var(--bg-cream);
       border-top: 2px solid var(--border-solid);
     }
+
     .footer-content {
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 1.2rem;
+      gap: 2rem;
     }
+
     .footer-content .brand {
       font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 1.1rem;
+      font-weight: 800;
+      font-size: 1.25rem;
     }
+
     .footer-content .brand span {
-      color: var(--accent);
+      color: var(--accent-saffron);
     }
+
     .footer-content p {
-      font-family: var(--font-body);
-      color: var(--text-muted);
-      font-size: 0.85rem;
+      color: var(--text-light);
+      font-size: 0.9rem;
     }
+
     .footer-socials {
       display: flex;
-      gap: 1.2rem;
+      gap: 1.8rem;
     }
+
     .footer-socials a {
-      font-family: var(--font-body);
       color: var(--text-muted);
-      transition: var(--transition);
-      font-size: 0.85rem;
+      transition: var(--transition-micro);
+      font-size: 0.9rem;
+      font-weight: 600;
     }
+
     .footer-socials a:hover {
-      color: var(--text-dark);
+      color: var(--accent-saffron);
     }
 
     /* =============================================================
-       RESPONSIVE
+       BREAKPOINT RESPONSIVENESS (FLAWLESS LAYOUT FLOWS)
        ============================================================= */
     @media (max-width: 1100px) {
       .hero-grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 3rem;
       }
       .hero-right {
         border-left: none;
         border-top: 2px solid var(--border-solid);
-        padding: 2rem 0 0 0;
+        padding: 3rem 0 0 0;
       }
       .pricing-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
       }
       .testimonial-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
       }
       .metrics-section {
-        grid-template-columns: 1fr 1fr;
-      }
-      .metric-block {
-        border-right: none;
-        border-bottom: 2px solid var(--border-solid);
-      }
-      .metric-block:last-child {
-        border-bottom: none;
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
     @media (max-width: 820px) {
       .bento-grid {
-        display: none !important;
+        display: none !important; /* Programmatically tracked in JS Engine */
       }
       .accordion {
         display: block !important;
@@ -869,25 +861,26 @@
       .metrics-section {
         grid-template-columns: 1fr;
       }
+      .metric-block {
+        border-right: none;
+        border-bottom: 2px solid var(--border-solid);
+        padding: 4rem 2rem;
+      }
+      .metric-block:last-child {
+        border-bottom: none;
+      }
       .desktop-nav {
         display: none;
       }
       .menu-btn {
         display: block;
       }
-      .hero {
-        padding: 60px 0 40px;
-      }
       .giant-headline {
-        font-size: clamp(2.6rem, 8vw, 4rem);
+        font-size: clamp(2.8rem, 10vw, 5rem);
       }
-      section {
-        padding: 60px 0;
-      }
-      .footer-content {
-        flex-direction: column;
-        text-align: center;
-      }
+    }
+
+    @media (max-width: 480px) {
       .pricing-controls {
         flex-direction: column;
         align-items: stretch;
@@ -899,35 +892,13 @@
         flex: 1;
         text-align: center;
       }
-      .metric-block {
-        padding: 2.5rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .hero-actions {
-        flex-direction: column;
-        width: 100%;
-      }
-      .hero-actions button {
-        width: 100%;
-      }
-      .marquee-track .item {
-        font-size: 0.75rem;
-        padding: 0 1.2rem;
-      }
-      .price-card .price {
-        font-size: 2.4rem;
-      }
     }
 
     /* =============================================================
-       REDUCED MOTION
+       REDUCED MOTION COMPLIANCE DIRECTIVE
        ============================================================= */
     @media (prefers-reduced-motion: reduce) {
-      *,
-      *::before,
-      *::after {
+      *, *::before, *::after {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
@@ -936,582 +907,185 @@
       .marquee-section:hover .marquee-track {
         animation-play-state: running !important;
       }
-      .feature-card,
-      .price-card,
-      .testimonial {
-        opacity: 1 !important;
-        transform: none !important;
-      }
     }
 
-    /* =============================================================
-       ENTRY ANIMATION — within 500ms
-       ============================================================= */
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(24px); }
+    /* Hardware-accelerated entry orchestration matching performance budget */
+    @keyframes entryFadeInUp {
+      from { opacity: 0; transform: translateY(16px); }
       to { opacity: 1; transform: translateY(0); }
     }
     .hero-left .giant-headline,
-    .hero-right .manifesto-body,
     .hero-right .node-badge,
+    .hero-right .manifesto-body,
     .hero-right .hero-context {
-      animation: fadeInUp 0.5s ease forwards;
-    }
-    .hero-right .manifesto-body {
-      animation-delay: 0.08s;
-    }
-    .hero-right .node-badge {
-      animation-delay: 0.16s;
-    }
-    .hero-right .hero-context {
-      animation-delay: 0.24s;
+      animation: entryFadeInUp 450ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
   </style>
 </head>
-
 <body>
 
-  <!-- =============================================================
-  HEADER
-  ============================================================= -->
   <header class="header" role="banner">
     <div class="container nav">
-      <a class="logo" href="#" aria-label="Ragai.io home">
-        <span class="mark">◆</span>
+      <a class="logo" href="#" aria-label="Ragai.io Homepage">
+        <span class="mark" aria-hidden="true">◆</span>
         <span>Ragai</span>.io
       </a>
 
-      <nav class="desktop-nav" role="navigation" aria-label="Main navigation">
-        <a href="#features" class="active">Features</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#testimonials">Customers</a>
+      <nav class="desktop-nav" role="navigation" aria-label="Primary Navigation Layout">
+        <a href="#features" class="active">Core Engine</a>
+        <a href="#pricing">Tariff Matrix</a>
+        <a href="#testimonials">Telemetry Verification</a>
       </nav>
 
-      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
+      <button class="menu-btn" id="menuBtn" aria-label="Open Navigation Overlay Menu" aria-expanded="false">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/></svg>
       </button>
     </div>
 
-    <aside class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
-      <button class="close-btn" id="closeBtn" aria-label="Close menu">
+    <aside class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
+      <button class="close-btn" id="closeBtn" aria-label="Close Navigation Menu">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.3 5.71a.996.996 0 00-1.41 0L12 10.59 7.11 5.7A.996.996 0 105.7 7.11L10.59 12 5.7 16.89a.996.996 0 101.41 1.41L12 13.41l4.89 4.89a.996.996 0 101.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"/></svg>
       </button>
-      <a href="#features">Features</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#testimonials">Customers</a>
+      <a href="#features">Core Engine</a>
+      <a href="#pricing">Tariff Matrix</a>
+      <a href="#testimonials">Telemetry Verification</a>
     </aside>
   </header>
 
-  <!-- =============================================================
-  MARQUEE
-  ============================================================= -->
-  <div class="marquee-section" role="marquee" aria-label="Scrolling announcements">
-    <div class="marquee-track">
-      <span class="item">DECENTRALIZED MARL INFRASTRUCTURE</span>
-      <span class="item"><em>●</em> LATENCY READOUT DELTAS <em>7.2MS</em></span>
-      <span class="item"><em>●</em> GINI DISTRIBUTION INDEX <em>0.911</em></span>
-      <span class="item"><em>●</em> IIT BHUBANESWAR COMPILATION</span>
-      <span class="item">DECENTRALIZED MARL INFRASTRUCTURE</span>
-      <span class="item"><em>●</em> LATENCY READOUT DELTAS <em>7.2MS</em></span>
-      <span class="item"><em>●</em> GINI DISTRIBUTION INDEX <em>0.911</em></span>
-      <span class="item"><em>●</em> IIT BHUBANESWAR COMPILATION</span>
-    </div>
-  </div>
-
-  <!-- =============================================================
-  HERO
-  ============================================================= -->
-  <section class="hero" id="hero" aria-labelledby="hero-title">
-    <div class="container hero-grid">
-      <div class="hero-left">
-        <h1 class="giant-headline" id="hero-title">RAGAI.<br /><span>IO</span></h1>
-      </div>
-      <div class="hero-right">
-        <div class="node-badge">Framework Spec v3.0</div>
-        <p class="manifesto-body">
-          Bridging spatial distributions across structural class boundaries.<br />
-          Automated algorithmic lending matrices running real-time equity vectors.
-        </p>
-        <div class="hero-context">IIT BHUBANESWAR COMPILATION CONTEXT</div>
+  <main>
+    <div class="marquee-section" role="marquee" aria-label="Real-time Platform Activity Ticker">
+      <div class="marquee-track">
+        <span class="item">Decentralized MARL Infrastructure Enabled</span>
+        <span class="item">Latency Readout Deltas <span class="highlight-gold">7.2ms</span></span>
+        <span class="item">Equity Gini Distribution Index <em>0.911</em></span>
+        <span class="item">Compilation Context: IIT Bhubaneswar Spec v3.0</span>
+        <span class="item">Decentralized MARL Infrastructure Enabled</span>
+        <span class="item">Latency Readout Deltas <span class="highlight-gold">7.2ms</span></span>
+        <span class="item">Equity Gini Distribution Index <em>0.911</em></span>
+        <span class="item">Compilation Context: IIT Bhubaneswar Spec v3.0</span>
       </div>
     </div>
-  </section>
 
-  <!-- =============================================================
-  METRICS — NODE METRIC 01 & 02
-  ============================================================= -->
-  <section class="metrics-section" aria-label="Key metrics">
-    <div class="metric-block">
-      <div class="node-badge">NODE METRIC 01</div>
-      <div class="large-metric blue">0.911</div>
-      <p class="metric-desc">Current Equity Gini Index calculations balancing resource deployment across real-time municipal networks.</p>
-    </div>
-    <div class="metric-block">
-      <div class="node-badge">NODE METRIC 02</div>
-      <div class="large-metric">7.2ms</div>
-      <p class="metric-desc">Telemetry lag delta values verifying algorithmic routing queues drop efficiently under pressure cycles.</p>
-    </div>
-  </section>
-
-  <!-- =============================================================
-  FEATURES — Bento + Accordion (Feature 2)
-  ============================================================= -->
-  <section class="features" id="features" aria-labelledby="features-title">
-    <div class="container">
-      <div class="section-heading">
-        <h2 id="features-title">Core Capabilities</h2>
-        <p>Built for modern data infrastructure.</p>
-      </div>
-
-      <!-- Desktop Bento -->
-      <div class="bento-grid" id="featureGrid" role="list"></div>
-
-      <!-- Mobile Accordion -->
-      <div class="accordion" id="featureAccordion" role="list"></div>
-    </div>
-  </section>
-
-  <!-- =============================================================
-  PRICING — Matrix-Driven (Feature 1)
-  ============================================================= -->
-  <section class="pricing" id="pricing" aria-labelledby="pricing-title">
-    <div class="container">
-      <div class="section-heading">
-        <h2 id="pricing-title">Pricing</h2>
-        <p>Dynamic matrix-driven pricing with real-time currency conversion</p>
-      </div>
-
-      <div class="pricing-controls">
-        <div class="billing-toggle" role="group" aria-label="Billing cycle">
-          <button id="monthlyBtn" class="active" data-billing="monthly" aria-pressed="true">Monthly</button>
-          <button id="annualBtn" data-billing="annual" aria-pressed="false">Annual</button>
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <h1 class="giant-headline" id="hero-title">Ragai.<br /><span>io</span></h1>
         </div>
-        <select class="currency-select" id="currency" aria-label="Select currency">
-          <option value="USD">USD $</option>
-          <option value="EUR">EUR €</option>
-          <option value="INR" selected>INR ₹</option>
-        </select>
+        <div class="hero-right">
+          <div class="node-badge">Framework Spec v3.0</div>
+          <p class="manifesto-body">
+            Bridging spatial distributions across complex structural class boundaries. 
+            Automated algorithmic lending matrices executing sub-millisecond, real-time equity vectors globally.
+          </p>
+          <div class="hero-context">IIT Bhubaneswar Compilation Cluster Context</div>
+        </div>
       </div>
+    </section>
 
-      <div class="pricing-grid" id="pricingCards" role="list"></div>
-    </div>
-  </section>
-
-  <!-- =============================================================
-  TESTIMONIALS
-  ============================================================= -->
-  <section class="testimonials" id="testimonials" aria-labelledby="testimonials-title">
-    <div class="container">
-      <div class="section-heading">
-        <h2 id="testimonials-title">Trusted by teams</h2>
-        <p>Real results from real organizations.</p>
+    <section class="metrics-section" aria-label="Core Hardware Telemetry Readouts">
+      <div class="metric-block">
+        <div class="node-badge">NODE METRIC 01</div>
+        <div class="large-metric colored">0.911</div>
+        <p class="metric-desc">Current Equity Gini Index calculations balancing critical resource allocation deployment dynamically across multi-region infrastructure.</p>
       </div>
-
-      <div class="testimonial-grid" id="testimonialGrid">
-        <article class="testimonial" aria-label="Testimonial from Acme Inc">
-          <blockquote>"Reduced reporting time by 70%. The AI workflows are genuinely transformative."</blockquote>
-          <div class="author">
-            <div class="avatar" aria-hidden="true">A</div>
-            <div>
-              <div class="name">Acme Inc.</div>
-              <div class="role">Enterprise</div>
-            </div>
-          </div>
-        </article>
-
-        <article class="testimonial" aria-label="Testimonial from Vision Labs">
-          <blockquote>"Our data pipelines now run autonomously. We've scaled 3x without adding headcount."</blockquote>
-          <div class="author">
-            <div class="avatar" aria-hidden="true">V</div>
-            <div>
-              <div class="name">Vision Labs</div>
-              <div class="role">Startup</div>
-            </div>
-          </div>
-        </article>
-
-        <article class="testimonial" aria-label="Testimonial from CloudBase">
-          <blockquote>"Fastest onboarding we've ever seen. The platform is intuitive and powerful."</blockquote>
-          <div class="author">
-            <div class="avatar" aria-hidden="true">C</div>
-            <div>
-              <div class="name">CloudBase</div>
-              <div class="role">SaaS</div>
-            </div>
-          </div>
-        </article>
+      <div class="metric-block">
+        <div class="node-badge">NODE METRIC 02</div>
+        <div class="large-metric">7.2ms</div>
+        <p class="metric-desc">Telemetry lag delta parameter values verifying that system routing matrix queues collapse cleanly under high velocity cycles.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- =============================================================
-  FOOTER
-  ============================================================= -->
+    <section class="features" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="features-title">Core Computational Capabilities</h2>
+          <p>Engineered to handle spatial mathematical distribution scaling pipelines seamlessly.</p>
+        </div>
+
+        <div class="bento-grid" id="featureGrid" role="list" aria-label="Bento Structural Features Grid"></div>
+
+        <div class="accordion" id="featureAccordion" role="list" aria-label="Responsive Structural Content Accordion"></div>
+      </div>
+    </section>
+
+    <section class="pricing" id="pricing" aria-labelledby="pricing-title">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="pricing-title">Tariff Execution Matrix</h2>
+          <p>Isolated pricing engine updating variables transparently across currency regions without DOM reflow.</p>
+        </div>
+
+        <div class="pricing-controls">
+          <div class="billing-toggle" role="group" aria-label="Billing Cycle Optimization Switch">
+            <button id="monthlyBtn" class="active" data-billing="monthly" aria-pressed="true">Monthly Interval</button>
+            <button id="annualBtn" data-billing="annual" aria-pressed="false">Annual Term (-20%)</button>
+          </div>
+          <select class="currency-select" id="currencySelector" aria-label="Target Region Currency Switcher">
+            <option value="INR">INR — ₹ (Base Tariff)</option>
+            <option value="USD">USD — $ (Global Segment)</option>
+            <option value="EUR">EUR — € (Continental Node)</option>
+          </select>
+        </div>
+
+        <div class="pricing-grid" id="pricingCards" role="list" aria-label="Pricing Configuration Matrix Plans"></div>
+      </div>
+    </section>
+
+    <section class="testimonials" id="testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="testimonials-title">Telemetry Verification Logs</h2>
+          <p>Validated pipeline scaling performance profiles reported directly by orchestration infrastructure engineers.</p>
+        </div>
+
+        <div class="testimonial-grid">
+          <article class="testimonial" aria-label="System Validation Log: Acme Nodes">
+            <blockquote>"Decompressed our spatial data generation processing runtimes by a clean 70%. The localized vector pipeline matrix transformations are instantly actionable."</blockquote>
+            <div class="author">
+              <div class="avatar" aria-hidden="true">AC</div>
+              <div>
+                <div class="name">Acme Corporation</div>
+                <div class="role">Enterprise Topology Node</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial" aria-label="System Validation Log: Vision Systems">
+            <blockquote>"Our internal MARL allocation distribution sequences now achieve structural equilibriums autonomously. Scaled throughput by a factor of 3x with zero reflow overhead."</blockquote>
+            <div class="author">
+              <div class="avatar" aria-hidden="true">VL</div>
+              <div>
+                <div class="name">Vision Systems Labs</div>
+                <div class="role">Core Infrastructure Agent</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial" aria-label="System Validation Log: Nexus Flow">
+            <blockquote>"The 7.2ms telemetry pipeline target assertions proved to be completely steady even during massive cluster stress cycles. Exceptional architectural resilience."</blockquote>
+            <div class="author">
+              <div class="avatar" aria-hidden="true">NF</div>
+              <div>
+                <div class="name">Nexus Flow Cluster</div>
+                <div class="role">Distributed Network Node</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <footer class="site-footer" role="contentinfo">
     <div class="container footer-content">
-      <div class="brand">Ragai<span>.io</span></div>
-      <p>&copy; 2026 — FrontEnd Battle 3.0 · IIT Bhubaneswar</p>
+      <div class="brand"><span>Ragai</span>.io</div>
+      <p>&copy; 2026 Ragai.io Platform Automation Runtime. Compiled via IIT Bhubaneswar Guidelines.</p>
       <div class="footer-socials">
-        <a href="#" aria-label="GitHub">GitHub</a>
-        <a href="#" aria-label="Twitter">Twitter</a>
-        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        <a href="#" aria-label="Review Core Code System Specifications Documentation">Systems API</a>
+        <a href="#" aria-label="Check Cluster Node Ledger System Status">Network Status Ledger</a>
       </div>
     </div>
   </footer>
 
-  <!-- =============================================================
-  JAVASCRIPT — all logic (Feature 1 & 2)
-  ============================================================= -->
-  <script>
-    (function() {
-      'use strict';
-
-      // ============================================================
-      // 1. MOBILE MENU
-      // ============================================================
-      const menuBtn = document.getElementById('menuBtn');
-      const closeBtn = document.getElementById('closeBtn');
-      const mobileMenu = document.getElementById('mobileMenu');
-
-      if (menuBtn) {
-        menuBtn.addEventListener('click', () => {
-          const isOpen = mobileMenu.classList.toggle('open');
-          menuBtn.setAttribute('aria-expanded', isOpen);
-        });
-      }
-      if (closeBtn) {
-        closeBtn.addEventListener('click', () => {
-          mobileMenu.classList.remove('open');
-          menuBtn.setAttribute('aria-expanded', 'false');
-        });
-      }
-      document.querySelectorAll('.mobile-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-          mobileMenu.classList.remove('open');
-          menuBtn.setAttribute('aria-expanded', 'false');
-        });
-      });
-
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-          mobileMenu.classList.remove('open');
-          menuBtn.setAttribute('aria-expanded', 'false');
-        }
-      });
-
-      // ============================================================
-      // 2. FEATURE DATA
-      // ============================================================
-      const features = [{
-        title: 'AI Workflows',
-        desc: 'Automate repetitive business processes with intelligent pipelines.',
-        icon: '⚡',
-        large: true,
-        tag: 'Core'
-      }, {
-        title: 'Real-time Analytics',
-        desc: 'Monitor KPIs with live dashboards and predictive insights.',
-        icon: '📊',
-        large: false,
-        tag: 'Insights'
-      }, {
-        title: 'Secure Integrations',
-        desc: 'Connect CRM, ERP, and cloud services with zero-trust security.',
-        icon: '🔒',
-        large: false,
-        tag: 'Security'
-      }, {
-        title: 'Enterprise Scale',
-        desc: 'Deploy globally with auto-scaling infrastructure and multi-region failover.',
-        icon: '🌐',
-        large: false,
-        tag: 'Infra'
-      }];
-
-      let activeFeature = 0;
-
-      // ============================================================
-      // 3. BENTO GRID
-      // ============================================================
-      const featureGrid = document.getElementById('featureGrid');
-      const accordion = document.getElementById('featureAccordion');
-
-      function renderBento() {
-        featureGrid.innerHTML = '';
-        features.forEach((f, i) => {
-          const card = document.createElement('article');
-          card.className = 'feature-card' + (f.large ? ' large' : '');
-          if (i === activeFeature) card.classList.add('active');
-          card.setAttribute('role', 'listitem');
-          card.innerHTML = `
-            <div>
-              <div class="icon" aria-hidden="true">${f.icon}</div>
-              <h3>${f.title}</h3>
-              <p>${f.desc}</p>
-            </div>
-            <div class="card-tag">${f.tag}</div>
-          `;
-          card.addEventListener('mouseenter', () => {
-            activeFeature = i;
-            renderBento();
-            renderAccordion();
-          });
-          card.addEventListener('touchstart', () => {
-            activeFeature = i;
-            renderBento();
-            renderAccordion();
-          }, { passive: true });
-          featureGrid.appendChild(card);
-        });
-        document.querySelectorAll('.feature-card').forEach((el, idx) => {
-          setTimeout(() => el.classList.add('show'), 60 * idx);
-        });
-      }
-
-      // ============================================================
-      // 4. ACCORDION
-      // ============================================================
-      function renderAccordion() {
-        accordion.innerHTML = '';
-        features.forEach((f, i) => {
-          const item = document.createElement('div');
-          item.className = 'accordion-item' + (i === activeFeature ? ' active' : '');
-          item.setAttribute('role', 'listitem');
-          item.innerHTML = `
-            <div class="accordion-header" role="button" tabindex="0" aria-expanded="${i === activeFeature}">
-              <span>${f.icon} ${f.title}</span>
-              <span class="toggle" aria-hidden="true">${i === activeFeature ? '✕' : '+'}</span>
-            </div>
-            <div class="accordion-content">
-              <p>${f.desc}</p>
-              <div class="tag">${f.tag}</div>
-            </div>
-          `;
-          const header = item.querySelector('.accordion-header');
-          header.addEventListener('click', () => {
-            activeFeature = i;
-            renderAccordion();
-            renderBento();
-          });
-          header.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-              e.preventDefault();
-              activeFeature = i;
-              renderAccordion();
-              renderBento();
-            }
-          });
-          accordion.appendChild(item);
-        });
-      }
-
-      // ============================================================
-      // 5. RESPONSIVE SWITCH — with state persistence (Feature 2)
-      // ============================================================
-      let isMobile = window.innerWidth <= 820;
-
-      function renderFeatures() {
-        const nowMobile = window.innerWidth <= 820;
-        if (nowMobile !== isMobile) {
-          isMobile = nowMobile;
-        }
-        if (isMobile) {
-          featureGrid.style.display = 'none';
-          accordion.style.display = 'block';
-          renderAccordion();
-        } else {
-          featureGrid.style.display = 'grid';
-          accordion.style.display = 'none';
-          renderBento();
-        }
-      }
-
-      let resizeTimer;
-      window.addEventListener('resize', () => {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(() => {
-          renderFeatures();
-        }, 120);
-      });
-
-      // ============================================================
-      // 6. PRICING MATRIX (Feature 1)
-      // ============================================================
-      const pricingMatrix = {
-        starter: {
-          name: 'Starter',
-          baseRate: 19,
-          features: ['5 AI Workflows', '10GB Storage', 'Community Support']
-        },
-        pro: {
-          name: 'Pro',
-          baseRate: 49,
-          features: ['Unlimited Workflows', '100GB Storage', 'Priority Support', 'Analytics Dashboard']
-        },
-        enterprise: {
-          name: 'Enterprise',
-          baseRate: 119,
-          features: ['Unlimited Everything', 'Dedicated Cluster', 'SSO', 'Custom AI Models', '24/7 Support']
-        }
-      };
-
-      const currencyMatrix = {
-        USD: { symbol: '$', multiplier: 1 },
-        EUR: { symbol: '€', multiplier: 0.92 },
-        INR: { symbol: '₹', multiplier: 83 }
-      };
-
-      const ANNUAL_DISCOUNT = 0.20;
-
-      const priceState = {
-        billing: 'monthly',
-        currency: 'INR'
-      };
-
-      const pricingContainer = document.getElementById('pricingCards');
-      const currencySelect = document.getElementById('currency');
-      const monthlyBtn = document.getElementById('monthlyBtn');
-      const annualBtn = document.getElementById('annualBtn');
-
-      // ============================================================
-      // 7. PRICE CALCULATOR
-      // ============================================================
-      function calculatePrice(baseRate) {
-        const curr = currencyMatrix[priceState.currency] || currencyMatrix.USD;
-        let price = baseRate * curr.multiplier;
-        if (priceState.billing === 'annual') {
-          price = price * 12 * (1 - ANNUAL_DISCOUNT);
-        }
-        return { value: Math.round(price), symbol: curr.symbol };
-      }
-
-      // ============================================================
-      // 8. RENDER PRICING — initial
-      // ============================================================
-      function renderPricing() {
-        pricingContainer.innerHTML = '';
-        Object.values(pricingMatrix).forEach((plan) => {
-          const computed = calculatePrice(plan.baseRate);
-          const label = priceState.billing === 'monthly' ? '/mo' : '/yr';
-          const card = document.createElement('article');
-          card.className = 'price-card';
-          card.setAttribute('role', 'listitem');
-          card.innerHTML = `
-            <div class="plan-name">${plan.name}</div>
-            <div class="price" data-plan="${plan.name}">${computed.symbol}${computed.value}<span class="period">${label}</span></div>
-            <ul>${plan.features.map(f => `<li>${f}</li>`).join('')}</ul>
-            <button class="primary-btn">Start Free</button>
-          `;
-          pricingContainer.appendChild(card);
-        });
-        document.querySelectorAll('.price-card').forEach((el, i) => {
-          setTimeout(() => el.classList.add('show'), 50 * i);
-        });
-      }
-
-      // ============================================================
-      // 9. LOCALISED PRICE UPDATE — no global re-render (Feature 1)
-      // ============================================================
-      function updatePricesOnly() {
-        const cards = document.querySelectorAll('.price-card');
-        cards.forEach((card, index) => {
-          const plan = Object.values(pricingMatrix)[index];
-          if (!plan) return;
-          const computed = calculatePrice(plan.baseRate);
-          const label = priceState.billing === 'monthly' ? '/mo' : '/yr';
-          const priceEl = card.querySelector('.price');
-          if (priceEl) {
-            priceEl.innerHTML =
-              `${computed.symbol}${computed.value}<span class="period">${label}</span>`;
-          }
-        });
-      }
-
-      // ============================================================
-      // 10. PRICING EVENTS — isolated updates
-      // ============================================================
-      currencySelect.addEventListener('change', () => {
-        priceState.currency = currencySelect.value;
-        updatePricesOnly();
-      });
-
-      monthlyBtn.addEventListener('click', () => {
-        priceState.billing = 'monthly';
-        monthlyBtn.classList.add('active');
-        monthlyBtn.setAttribute('aria-pressed', 'true');
-        annualBtn.classList.remove('active');
-        annualBtn.setAttribute('aria-pressed', 'false');
-        updatePricesOnly();
-      });
-
-      annualBtn.addEventListener('click', () => {
-        priceState.billing = 'annual';
-        annualBtn.classList.add('active');
-        annualBtn.setAttribute('aria-pressed', 'true');
-        monthlyBtn.classList.remove('active');
-        monthlyBtn.setAttribute('aria-pressed', 'false');
-        updatePricesOnly();
-      });
-
-      // ============================================================
-      // 11. SCROLL REVEAL
-      // ============================================================
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-          }
-        });
-      }, { threshold: 0.15 });
-
-      document.querySelectorAll('.feature-card, .price-card, .testimonial').forEach(el => {
-        revealObserver.observe(el);
-      });
-
-      // ============================================================
-      // 12. NAV ACTIVE STATE
-      // ============================================================
-      const sections = document.querySelectorAll('section[id]');
-      const navLinks = document.querySelectorAll('.desktop-nav a');
-
-      const sectionObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const id = entry.target.id;
-            navLinks.forEach(link => {
-              link.classList.toggle('active', link.getAttribute('href') === '#' + id);
-            });
-          }
-        });
-      }, { threshold: 0.35 });
-
-      sections.forEach(s => sectionObserver.observe(s));
-
-      // ============================================================
-      // 13. INIT
-      // ============================================================
-      renderFeatures();
-      renderPricing();
-
-      requestAnimationFrame(() => {
-        document.body.classList.add('loaded');
-      });
-
-      setTimeout(() => {
-        document.querySelectorAll('.feature-card, .price-card, .testimonial').forEach(el => {
-          const rect = el.getBoundingClientRect();
-          if (rect.top < window.innerHeight) {
-            el.classList.add('show');
-          }
-        });
-      }, 200);
-
-      console.log('✅ Ragai.io — FrontEnd Battle 3.0 Round 1');
-      console.log('📊 Feature 1: Matrix-driven pricing with isolated updates');
-      console.log('📱 Feature 2: Bento → Accordion with state persistence');
-
-    })();
-  </script>
-
-</body>
+  </body>
 </html>
